@@ -4,61 +4,67 @@
 class Card {
 
     private $id;
-    public $forme;
-    public $paire;
-    public $pdo;
+    public $face;
+    public $dos;
+    public $retourner;
 
+    //  CONSTRUCTEUR
 
-
-    // CONSTRUCTEUR
-    public function __construct()
+    public function __construct(int $id,string $face,string $dos,bool $retourner)
     {
-        $this->pdo = new PDO('mysql:host=localhost;dbname=memory;charset=utf8','root','');
-    }
+        $this->id = $id;
+        $this->face = $face;
+        $this->dos = $dos;
+        $this->retourner = $retourner;
 
+    }
 
     // MÉTHODES
 
-
-    public function randomChoice()
+    public function carte()
     {
-        return rand(3,12);
+        
+    }  
+
+    /**
+     * Get the value of id
+     */ 
+    public function getId()
+    {
+        return $this->id;
     }
 
+    /**
+     * Get the value of face
+     */ 
+    public function getFace()
+    {
+        return $this->face;
+    }
 
+    /**
+     * Set the value of dos
+     *
+     * @return  self
+     */ 
+    public function setDos($dos)
+    {
+        $this->dos = $dos;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of retourner
+     */ 
+    public function getRetourner()
+    {
+        return $this->retourner;
+    }
+    
     
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ?>

@@ -1,11 +1,20 @@
 <?php
 
-// require 'Classes/Card.php';
+require './Classes/Card.php';
+include './fonctions/fonctions.php';
 
-// $newpair = new Card();
-// $newpair->randomChoice();
-// $var_return = $newpair->randomChoice();
-// var_dump($var_return);
+if(isset($_POST['submit']))
+{
+    $nombre_pair = $_POST['nombre_pair'];
+    var_dump($nombre_pair);
+}
+
+
+
+
+
+
+
 
 
 
@@ -21,11 +30,10 @@
 </head>
 <body>
     <main>
-        <img src="img/Luffy.webp" alt="Image de Luffy">
-        <img src="img/Zoro.webp" alt="Image de Zoro">
-        <img src="img/Sanji.webp" alt="Image de Sanji">
-        <img src="img/Jimbe.webp" alt="Image de Jimbe">
-        <img src="img/Shanks.webp" alt="Image de Shanks">
+        <form action="" method="post">
+            <input type="text" name="nombre_pair" id="">
+            <input type="submit" value="Choisir un nombre" name="submit">
+        </form>
     </main>
 </body>
 </html>
