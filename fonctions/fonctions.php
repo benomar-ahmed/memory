@@ -8,7 +8,7 @@ $tableau = [];
 
 for($i=1;$i < $nombre_pair*2;$i++)
 {
-    $tableau = new Card($i.'img'.$i % 3.'.jpg','card_dos.jpg',false);
+    // $tableau = new Card($i.'img'.$i % 3.,'i.jpg','card_dos.jpg',false);
 }
 shuffle($tableau);
 
